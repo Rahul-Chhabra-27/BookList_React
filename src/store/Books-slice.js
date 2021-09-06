@@ -12,6 +12,9 @@ const books = createSlice({
             const id = action.payload;
             const filteredBooks = state.books.filter(book => book.id !== id);
             state.books = filteredBooks;
+        },
+        replaceState(state,action){
+            state.books = action.payload;
         }
     }
 })
