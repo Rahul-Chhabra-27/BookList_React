@@ -5,10 +5,10 @@ import { useSelector } from "react-redux";
 const Table = () => {
 
   const books = useSelector((state) => state.books.books);
-  const booksRendering = books.map((book) => {
+  const booksRendering = books.map((book,idx) => {
     return (
       <Book
-        key={book.id}
+        key={idx}
         id={book.id}
         title={book.title}
         name={book.name}
